@@ -27,6 +27,9 @@ public class FilteringMachine {
 
     // Metoda powinna przekształcić tytuły na książki i zwrócić tylko te które rozpoczynają się od słowa "Gra"
     public List<Book> convertToBooksAndReturnOnlyStartingWithGra(List<String> titles) {
-        return null;
+        return titles.stream()
+                .filter(title -> title.startsWith("Gra"))
+                .map(Book::new)
+                .collect(Collectors.toList());
     }
 }
