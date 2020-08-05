@@ -15,7 +15,7 @@ public class FilteringMachineTwo {
 
     public List<User> convertPeopleToUsers(List<Person> people) {
         return people.stream()
-                .map(person -> new User(person.getName(),person.getAge(), person.getName() + "_" + person.getAge()))
+                .map(person -> new User(person.getName(), person.getAge(), person.getName() + "_" + person.getAge()))
                 .collect(Collectors.toList());
     }
 }

@@ -1,21 +1,19 @@
 package pl.javastart.exercise.streams;
 
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class FilteringMachine {
 
     public List<Integer> filterOutNotEvenNumbers(List<Integer> numberList) {
         return numberList.stream()
-                .filter(number -> (number % 2 == 0))
+                .filter(number -> number % 2 == 0)
                 .collect(Collectors.toList());
     }
 
     public List<Integer> filterOutLowerNumbersThan20(List<Integer> numberList) {
         return numberList.stream()
-                .filter(number -> (number >= 20))
+                .filter(number -> number >= 20)
                 .collect(Collectors.toList());
     }
 
